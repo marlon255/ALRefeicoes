@@ -43,14 +43,14 @@
 						$LE_pago->bindValue(":new_pago", $new_pago);
 						$LE_pago->execute();
 						echo "<script>alert('Dados atualizados com Sucesso!')</script>";
-						echo "<script>location.href='fornecedor_externo.php';</script>";
+						echo "<script>location.href='lancamentos_externo.php';</script>";
 					}
 					if(isset($_POST['excluir_LE'.$fetch_LE['id']])){
 						$sql_del_LE = "DELETE FROM `fornecimento_externo` WHERE `id` = '".$_POST['LE_id']."'";
 						$del_LE = $PDO->prepare($sql_del_LE);
 						$del_LE->execute();
 						echo "<script>alert('Dados excluidos com Sucesso!')</script>";
-						echo "<script>location.href='fornecedor_externo.php';</script>";
+						echo "<script>location.href='lancamentos_externo.php';</script>";
 					}
 		?>
 		<form method="post" style="width: 948px;">

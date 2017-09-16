@@ -42,14 +42,14 @@
 						$LL_pago->bindValue(":new_pago", $new_pago);
 						$LL_pago->execute();
 						echo "<script>alert('Dados atualizados com Sucesso!')</script>";
-						echo "<script>location.href='fornecedor_local.php';</script>";
+						echo "<script>location.href='lancamentos_local.php';</script>";
 					}
 					if(isset($_POST['excluir_LL'.$fetch_LL['id']])){
 						$sql_del_LL = "DELETE FROM `fornecimento_local` WHERE `id` = '".$_POST['LL_id']."'";
 						$del_LL = $PDO->prepare($sql_del_LL);
 						$del_LL->execute();
 						echo "<script>alert('Dados excluidos com Sucesso!')</script>";
-						echo "<script>location.href='fornecedor_local.php';</script>";
+						echo "<script>location.href='lancamentos_local.php';</script>";
 					}
 		?>
 		<form method="post" style="width: 945px;">

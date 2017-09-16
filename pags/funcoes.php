@@ -930,7 +930,7 @@ session_start();
 
 	//Selecionando todos os lançamentos Locais
 	//LL = Lançamento Local
-	$sql_selecionar_LL = "SELECT * FROM `fornecimento_local` ORDER BY `pago` DESC, `data_compra` ASC";
+	$sql_selecionar_LL = "SELECT * FROM `fornecimento_local` ORDER BY `pago` DESC, `data_compra` DESC";
 	$exibir_LL = $PDO->prepare($sql_selecionar_LL);
 	$exibir_LL->execute();
 	$fetch_LL = $exibir_LL->fetch(PDO::FETCH_ASSOC);
