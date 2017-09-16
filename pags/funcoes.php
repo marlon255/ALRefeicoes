@@ -12,6 +12,9 @@ session_start();
 		unset($_SESSION['senha']);
 		header('location: ../index.php');
 	};
+	if(isset($_POST['mudar_venda'])){
+		header('location: ../venda/index.php');
+	}
 
 	//Cadastrando novos usuarios
 	if(isset($_POST['botao_cadastro_usuario'])){

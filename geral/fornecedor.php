@@ -106,20 +106,20 @@
 				<input type="text" name="contato1_fornecedor">
 			</div>
 			<div class="label_input">
-				<label>Contato 2</label>
-				<input type="text" name="contato2_fornecedor">
-			</div>
-			<div class="label_input">
-				<label>Contato 3</label>
-				<input type="text" name="contato3_fornecedor">
-			</div>
-			<div class="label_input">
 				<label>Telefone 1</label>
 				<input type="text" name="telefone1_fornecedor">
 			</div>
 			<div class="label_input">
+				<label>Contato 2</label>
+				<input type="text" name="contato2_fornecedor">
+			</div>
+			<div class="label_input">
 				<label>Telefone 2</label>
 				<input type="text" name="telefone2_fornecedor">
+			</div>
+			<div class="label_input">
+				<label>Contato 3</label>
+				<input type="text" name="contato3_fornecedor">
 			</div>
 			<div class="label_input">
 				<label>Telefone 3</label>

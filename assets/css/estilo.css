@@ -273,6 +273,20 @@ input[type='number']:hover, input[type='text']:hover, .label_input select:hover,
 	text-align: center;
 	display: none;
 }
+.lancamento_local{
+	width: 1000px;
+	height: 470px;
+	background: rgb(255,255,255);
+	text-align: center;
+	margin: 0px auto;
+}
+.lancamento_externo{
+	width: 1000px;
+	height: 470px;
+	background: rgb(255,255,255);
+	text-align: center;
+	margin: 0px auto;
+}
 .cabecalho_atualizar{
 	margin: 0px auto 0px auto;
 }

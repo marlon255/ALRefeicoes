@@ -20,7 +20,7 @@
 	<div class="usuario">
 		<div class="nome">Usuário: <?=$_SESSION['login'];?></div>
 		<form method="post" class="logout">
-			<input type="submit" class="botao_top" name="mudar_venda" value="Mudar para Vendas">
+			<input type="submit" class="botao_top" name="mudar_venda" value="Mudar para Compras">
 			<input type="button" class="botao_top" id="trocar_senha" value="Mudar Senha">
 			<input type="submit" class="botao_top" name="deslogar" value="Deslogar">
 		</form>

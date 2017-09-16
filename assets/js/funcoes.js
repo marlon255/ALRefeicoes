@@ -68,7 +68,8 @@ $(document).ready(function(){
 			url: "../pags/busca_valor.php",
 			dataType: "json",	
 			data: {
-			    produto: $('#produto_local').val()
+			    produto: $('#produto_local').val(),
+			    fornecedor: $('#fornecedor_local').val()
 			},
 			success: function( data ) {
 			   $('#valor_produto').val(data);
@@ -241,10 +242,9 @@ $(document).ready(function(){
 			alert("Campo Valor da 1ª Parcela em branco!");
 		}
 	});
-	$("#quantidade_local").blur(function(){
+	$("#data_compra_local").blur(function(){
 		if ($("#pergunta_combustivel").val() == "sim") {
 			$("#combustivel").show();
-			$("#focusaki").focus();
 		}else{
 			$("#combustivel").hide();
 		}
@@ -277,20 +277,11 @@ $(document).ready(function(){
 		$("#fundo_modal").show(200);
 		$("#conteudo_modal").show(200);
 	});
-	$("#lancamentos_local").click(function(){
-		$("#fundo_modal").show(200);
-		$("#conteudo_modal").show(200);
-	});
-	$("#lancamentos_externo").click(function(){
-		$("#fundo_modal").show(200);
-		$("#conteudo_modal").show(200);
-	});
 	$(".close").click(function(){
 		$("#fundo_modal").hide(200);
 		$("#new_user").hide(200);
 		$("#change_pass").hide(200);
 		$("#users").hide(200);
-		$("#conteudo_modal").hide(200);
 		$("#conteudo_modal").hide(200);
 		$("#lancamentos").hide(200);
 	});
