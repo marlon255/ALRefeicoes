@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 25-Jul-2017 às 21:02
+-- Generation Time: 16-Set-2017 às 03:20
 -- Versão do servidor: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -29,8 +29,8 @@ USE `alrefeicoes`;
 --
 
 DROP TABLE IF EXISTS `fornecedor`;
-CREATE TABLE IF NOT EXISTS `fornecedor` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `fornecedor` (
+  `id` int(11) NOT NULL,
   `tipo_fornecedor` varchar(50) NOT NULL,
   `razao_social` varchar(50) NOT NULL,
   `nome_fantasia` varchar(50) NOT NULL,
@@ -47,9 +47,8 @@ CREATE TABLE IF NOT EXISTS `fornecedor` (
   `status` int(11) DEFAULT NULL,
   `data_cadastro` date NOT NULL,
   `hora_cadastro` time NOT NULL,
-  `usuario_cadastro` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  `usuario_cadastro` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -58,8 +57,8 @@ CREATE TABLE IF NOT EXISTS `fornecedor` (
 --
 
 DROP TABLE IF EXISTS `fornecimento_externo`;
-CREATE TABLE IF NOT EXISTS `fornecimento_externo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `fornecimento_externo` (
+  `id` int(11) NOT NULL,
   `unidade_producao` varchar(50) DEFAULT NULL,
   `nota_fiscal` varchar(50) DEFAULT NULL,
   `data_emissao` date DEFAULT NULL,
@@ -75,9 +74,8 @@ CREATE TABLE IF NOT EXISTS `fornecimento_externo` (
   `pago` int(11) DEFAULT NULL,
   `data_cadastro` date DEFAULT NULL,
   `hora_cadastro` time DEFAULT NULL,
-  `usuario_cadastro` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  `usuario_cadastro` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -86,8 +84,8 @@ CREATE TABLE IF NOT EXISTS `fornecimento_externo` (
 --
 
 DROP TABLE IF EXISTS `fornecimento_externo2`;
-CREATE TABLE IF NOT EXISTS `fornecimento_externo2` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `fornecimento_externo2` (
+  `id` int(11) NOT NULL,
   `unidade_producao` varchar(50) DEFAULT NULL,
   `nota_fisca` varchar(50) DEFAULT NULL,
   `data_emissao` date DEFAULT NULL,
@@ -115,8 +113,7 @@ CREATE TABLE IF NOT EXISTS `fornecimento_externo2` (
   `valor_sexto` varchar(50) DEFAULT NULL,
   `data_cadastro` date DEFAULT NULL,
   `hora_cadastro` time DEFAULT NULL,
-  `usuario_cadastro` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `usuario_cadastro` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -126,8 +123,8 @@ CREATE TABLE IF NOT EXISTS `fornecimento_externo2` (
 --
 
 DROP TABLE IF EXISTS `fornecimento_local`;
-CREATE TABLE IF NOT EXISTS `fornecimento_local` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `fornecimento_local` (
+  `id` int(11) NOT NULL,
   `unidade_producao` varchar(50) NOT NULL,
   `data_compra` varchar(50) NOT NULL,
   `fornecedor_local` varchar(50) NOT NULL,
@@ -143,9 +140,8 @@ CREATE TABLE IF NOT EXISTS `fornecimento_local` (
   `pago` int(11) DEFAULT NULL,
   `data_cadastro` date NOT NULL,
   `hora_cadastro` time NOT NULL,
-  `usuario_cadastro` varchar(50) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  `usuario_cadastro` varchar(50) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -154,8 +150,8 @@ CREATE TABLE IF NOT EXISTS `fornecimento_local` (
 --
 
 DROP TABLE IF EXISTS `motorista`;
-CREATE TABLE IF NOT EXISTS `motorista` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `motorista` (
+  `id` int(11) NOT NULL,
   `nome_motorista` varchar(50) NOT NULL,
   `numero_cnh` varchar(50) NOT NULL,
   `categoria_cnh` varchar(50) NOT NULL,
@@ -163,8 +159,7 @@ CREATE TABLE IF NOT EXISTS `motorista` (
   `idade` varchar(20) NOT NULL,
   `data_cadastro` date NOT NULL,
   `hora_cadastro` time NOT NULL,
-  `usuario_cadastro` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
+  `usuario_cadastro` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -174,8 +169,8 @@ CREATE TABLE IF NOT EXISTS `motorista` (
 --
 
 DROP TABLE IF EXISTS `produto`;
-CREATE TABLE IF NOT EXISTS `produto` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `produto` (
+  `id` int(11) NOT NULL,
   `fornecedor` varchar(50) NOT NULL,
   `descricao` varchar(50) NOT NULL,
   `unidade_medida` varchar(50) NOT NULL,
@@ -183,9 +178,8 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `pergunta_combustivel` varchar(3) NOT NULL,
   `data_cadastro` date NOT NULL,
   `hora_cadastro` time NOT NULL,
-  `usuario_cadastro` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  `usuario_cadastro` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -194,16 +188,15 @@ CREATE TABLE IF NOT EXISTS `produto` (
 --
 
 DROP TABLE IF EXISTS `unidade_producao`;
-CREATE TABLE IF NOT EXISTS `unidade_producao` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `unidade_producao` (
+  `id` int(11) NOT NULL,
   `cliente` varchar(50) NOT NULL,
   `unidade` varchar(50) NOT NULL,
   `status` int(11) DEFAULT NULL,
   `data_cadastro` date NOT NULL,
   `hora_cadastro` time NOT NULL,
-  `usuario_cadastro` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  `usuario_cadastro` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -212,14 +205,13 @@ CREATE TABLE IF NOT EXISTS `unidade_producao` (
 --
 
 DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
   `login` varchar(50) DEFAULT NULL,
   `senha` varchar(50) DEFAULT NULL,
   `nivel` int(11) DEFAULT NULL,
-  `status` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  `status` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -228,8 +220,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 DROP TABLE IF EXISTS `veiculo`;
-CREATE TABLE IF NOT EXISTS `veiculo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `veiculo` (
+  `id` int(11) NOT NULL,
   `descricao_veiculo` varchar(50) CHARACTER SET latin1 NOT NULL,
   `placa_veiculo` varchar(50) CHARACTER SET latin1 NOT NULL,
   `km_veiculo` varchar(50) CHARACTER SET latin1 NOT NULL,
@@ -238,10 +230,116 @@ CREATE TABLE IF NOT EXISTS `veiculo` (
   `consumo_veiculo` varchar(50) CHARACTER SET latin1 NOT NULL,
   `data_cadastro` date NOT NULL,
   `hora_cadastro` time NOT NULL,
-  `usuario_cadastro` varchar(50) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`id`)
+  `usuario_cadastro` varchar(50) CHARACTER SET latin1 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `fornecedor`
+--
+ALTER TABLE `fornecedor`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fornecimento_externo`
+--
+ALTER TABLE `fornecimento_externo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fornecimento_externo2`
+--
+ALTER TABLE `fornecimento_externo2`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fornecimento_local`
+--
+ALTER TABLE `fornecimento_local`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `motorista`
+--
+ALTER TABLE `motorista`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `unidade_producao`
+--
+ALTER TABLE `unidade_producao`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `veiculo`
+--
+ALTER TABLE `veiculo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `fornecedor`
+--
+ALTER TABLE `fornecedor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `fornecimento_externo`
+--
+ALTER TABLE `fornecimento_externo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `fornecimento_externo2`
+--
+ALTER TABLE `fornecimento_externo2`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `fornecimento_local`
+--
+ALTER TABLE `fornecimento_local`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `motorista`
+--
+ALTER TABLE `motorista`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `unidade_producao`
+--
+ALTER TABLE `unidade_producao`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `veiculo`
+--
+ALTER TABLE `veiculo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

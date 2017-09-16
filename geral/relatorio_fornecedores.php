@@ -26,6 +26,22 @@
 	</div>	
 </div>
 <table class="tabela_relatorio">
+	<tr style="font-weight: bold;">
+		<td>Razão Social</td>
+		<td>Nome Fantasia</td>
+		<td>Tipo de Fornecedor</td>
+		<td>CNPJ</td>
+		<td>Inscrição Estadual</td>
+		<td>Endereço</td>
+		<td>E-mail</td>
+		<td>Contato</td>
+		<td>Telefone</td>
+		<td>Contato</td>
+		<td>Telefone</td>
+		<td>Contato</td>
+		<td>Telefone</td>
+		<td>Ativo?</td>
+	</tr>
 <?php
 	if($fetch_fornecedor > 0){
 		do{
