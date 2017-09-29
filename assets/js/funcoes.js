@@ -242,9 +242,10 @@ $(document).ready(function(){
 			alert("Campo Valor da 1ª Parcela em branco!");
 		}
 	});
-	$("#data_compra_local").blur(function(){
+	$("#quantidade_local").blur(function(){
 		if ($("#pergunta_combustivel").val() == "sim") {
 			$("#combustivel").show();
+			$("#focusaki").focus();
 		}else{
 			$("#combustivel").hide();
 		}

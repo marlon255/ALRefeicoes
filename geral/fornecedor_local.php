@@ -25,6 +25,11 @@
 				?>
 				</select>
 			</div>
+			<!-- Data da compra do produto -->
+			<div class="label_input">
+				<label>Data da Compra</label>
+				<input type="date" name="data_compra_local" id="data_compra_local">
+			</div>
 			<!-- Buscando o produto -->
 			<div class="label_input">
 				<label>Fornecedor</label>
@@ -48,11 +53,6 @@
 					<option selected disabled>Selecione --></option>
 				</select>
 				<input type="hidden" name="pergunta_combustivel" id="pergunta_combustivel">
-			</div>
-			<!-- Data da compra do produto -->
-			<div class="label_input">
-				<label>Data da Compra</label>
-				<input type="date" name="data_compra_local" id="data_compra_local">
 			</div>
 			<!-- Quantidade a ser comprada -->
 			<div class="label_input">
